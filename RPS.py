@@ -7,10 +7,9 @@ def main():
 
     playAgain = 'Y'  
     while playAgain == 'Y':  
-        # Game logic
           computer = random.choice(['R', 'P', 'S'])  
           player = input("Choose your weapon (R, P, S):\n")  
-
+          
         
             if computer == 'R':
                 print("Computer chose Rock")
@@ -41,8 +40,9 @@ def main():
           elif player == 'S' and computer == 'R':
               print("You lose.")
               losses += 1
+              
             playAgain = input("Play again? (Y/N): ")
-     
+    
 
     
     print("\nGame over!")
