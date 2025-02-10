@@ -5,21 +5,21 @@ def main():
     ties = 0
     losses = 0
 
-    playagain = 'Y'  
-    while playagain == 'Y':  # Main game loop
+    playAgain = 'Y'  
+    while playAgain == 'Y':  
         # Game logic
-          computer = random.choice(['R', 'P', 'S'])  # Computer randomly selects
-          player = input("Choose your weapon (R, P, S):\n")  # Get player's choice
+          computer = random.choice(['R', 'P', 'S'])  
+          player = input("Choose your weapon (R, P, S):\n")  
 
-        # Print the computer's choice
-          if computer == 'R':
+        
+            if computer == 'R':
                 print("Computer chose Rock")
           elif computer == 'P':
               print("Computer chose Paper")
-          elif computer == 'S':
+          else computer == 'S':
               print("Computer chose Scissors")
 
-          # Determine the winner
+          
           if player == computer:
               print("It's a tie.")
               ties += 1
@@ -41,8 +41,8 @@ def main():
           elif player == 'S' and computer == 'R':
               print("You lose.")
               losses += 1
-
-          playagain = input("Play again? (Y/N): ").upper() 
+            playAgain = input("Play again? (Y/N): ")
+     
 
     
     print("\nGame over!")
